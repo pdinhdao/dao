@@ -1,1 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<title>HOANGDAOIOS</title>
 
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #00ff41;
+    --dark: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--dark);
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* MA TRẬN SỐ CHẠY */
+#matrix {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* HIỆU ỨNG ÁNH SÁNG */
+.glow {
+    color: var(--green);
+    text-shadow:
+        0 0 10px var(--green),
+        0 0 15px var(--green),
+        0 0 30px #00aa33;
+}
+
+/* KHUNG WEBSITE */
+.container {
+    position: relative;
+    z-index: 1;
+    width: min(92%, 520px);
+    margin: 35px auto;
+    padding: 28px 20px;
+    background: rgba(0, 0, 0, 0.88);
+    border: 1px solid rgba(0, 255, 65, 0.7);
+    border-radius: 22px;
+    box-shadow: 0 0 25px rgba(0, 255, 65, 0.13);
+    animation: appear 0.8s ease;
+    text-align: center;
+}
+
+/* TIÊU ĐỀ */
+h1 {
+    font-size: clamp(30px, 8vw, 42px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 12px 0;
+    animation: pulse 2s infinite;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 15px;
+    margin: 15px 0 28px;
+    line-height: 1.6;
+}
+
+.section-title {
+    color: var(--green);
+    font-size: 22px;
+    margin: 24px 0 15px;
+}
+
+/* THẺ THÔNG TIN */
+.info {
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    background: rgba(0, 255, 65, 0.05);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 14px 0 22px;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+/* NÚT LINK */
+.btn {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 15px 0;
+    padding: 19px 12px;
+    color: var(--green);
+    background: rgba(0, 255, 65, 0.07);
+    border: 1px solid var(--green);
+    border-radius: 13px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.25s ease;
+    box-shadow: 0 0 8px rgba(0, 255, 65, 0.08);
+}
+
+.btn:hover,
+.btn:active {
+    color: #000;
+    background: var(--green);
+    box-shadow: 0 0 25px rgba(0, 255, 65, 0.65);
+    transform: scale(1.025);
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.6s;
+}
+
+.btn:hover::after {
+    left: 150%;
+}
+
+/* CHÂN TRANG */
+.footer {
+    color: #777;
+    font-size: 12px;
+    margin-top: 30px;
+    line-height: 1.8;
+}
+
+/* ANIMATION */
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 8px #00ff41;
+    }
+    50% {
+        text-shadow:
+            0 0 15px #00ff41,
+            0 0 35px #00ff41;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NỀN MA TRẬN -->
+<canvas id="matrix"></canvas>
+
+<main class="container">
+
+    <h1 class="glow">Hoang Đao IOS</h1>
+
+    <p class="subtitle">
+        ✨ WELCOME TO MY WEBSITE ✨<br>
+        DIGITAL WORLD · IOS · ANDROID
+    </p>
+
+    <h2 class="section-title glow">
+        ⚡ Hoang Đao IOS ⚡
+    </h2>
+
+
+    <div class="info">
+        <br>
+       📱android · 📱 iOS · 🔥     Hoang Đao IOS
+    </div>
+
+
+    <a class="btn"
+       href="https://www.tiktok.com/@hoangdao0012?_r=1&_t=ZS-9AZ9ArtEBUs"
+       target="_blank"
+       rel="noopener noreferrer">
+        TIKTOK 👾
+    </a>
+
+ <a class="btn"
+       href="https://link4m.org/scOh7Dp6"
+       target="_blank"
+       rel="noopener noreferrer">
+        📨 DELTA PRX VIP IOS ANDROID
+    </a>
+
+
+    <a class="btn"
+       href="https://link4m.org/jYjhau"
+       target="_blank"
+       rel="noopener noreferrer">
+        🎮 GTA SA DRILL
+    </a>
+
+
+ 
+
+
+    <a class="btn"
+       href="https://link4m.net/hxvjL8bK"
+       target="_blank"
+       rel="noopener noreferrer">
+          🇻🇳 SAVE GTA SA
+    </a>
+
+
+
+    <h2 class="section-title glow">
+        SYSTEM STATUS
+    </h2>
+
+    <div class="info">
+        <p>STATUS: <span class="glow">ONLINE</span></p>
+        <p>NAME: dinh đao </p>
+        <p>Năm: K12 </p>
+        <p>C TRAI: LÀ HACKER LỎ     <span class="glow"> OFF </span></p>
+    </div>
+
+    <div class="footer">
+        © 20/10/2026 <br>
+        ALL RIGHTS RESERVED
+    </div>
+
+</main>
+
+<script>
+/* HIỆU ỨNG MA TRẬN SỐ XANH */
+(() => {
+    const canvas = document.getElementById("matrix");
+    const ctx = canvas.getContext("2d");
+
+    let width = 0;
+    let height = 0;
+    let columns = 0;
+    let drops = [];
+    let fontSize = 15;
+
+    const characters = "01234567890123456789";
+
+    function resize() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+        width = window.innerWidth;
+        height = window.innerHeight;
+
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
+
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        fontSize = width < 500 ? 13 : 16;
+        columns = Math.ceil(width / fontSize);
+
+        drops = Array.from(
+            { length: columns },
+            () => Math.random() * (height / fontSize)
+        );
+    }
+
+    function draw() {
+        /* Tạo vệt mờ để số trông như đang chạy */
+        ctx.fillStyle = "rgba(0, 0, 0, 0.10)";
+        ctx.fillRect(0, 0, width, height);
+
+        ctx.font = fontSize + "px monospace";
+
+        for (let i = 0; i < columns; i++) {
+            const number = characters[
+                Math.floor(Math.random() * characters.length)
+            ];
+
+            const x = i * fontSize;
+            const y = drops[i] * fontSize;
+
+            ctx.fillStyle = Math.random() > 0.94
+                ? "#ffffff"
+                : "#00ff41";
+
+            ctx.shadowColor = "#00ff41";
+            ctx.shadowBlur = 5;
+            ctx.fillText(number, x, y);
+            ctx.shadowBlur = 0;
+
+            if (y > height && Math.random() > 0.965) {
+                drops[i] = 0;
+            } else {
+                drops[i] += 0.45 + Math.random() * 0.6;
+            }
+        }
+
+        requestAnimationFrame(draw);
+    }
+
+    window.addEventListener("resize", resize);
+
+    resize();
+    draw();
+})();
+</script>
+
+</body>
+</html>
